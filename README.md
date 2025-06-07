@@ -1,1 +1,1 @@
-# Active-Directory-Project-2.0
+# 30 Days MyDFIR SOC Analyst Challenge
