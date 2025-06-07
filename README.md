@@ -32,3 +32,8 @@
 1. [Draw.io file](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/30-days-mydfir-diagram.drawio)
 
 2. [Final Diagram](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/30-days-mydfir-diagram.drawio-1.pdf)
+
+<br><br>
+
+<h4 align="center">DAY 2 | ELK STACK INTRODUCTION</h4>
+
