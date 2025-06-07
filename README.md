@@ -27,7 +27,7 @@
 3. Go over how to investigate alerts (high-level)
    
 <br><br>
-<h4 align="center">Day 1 | How To Create a Logical Diagram</h4>
+<h4 align="center">DAY 1 | HOW TO CREATE A LOGICAL DIAGRAM</h4>
 
 1. [Draw.io file](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/30-days-mydfir-diagram.drawio)
 
