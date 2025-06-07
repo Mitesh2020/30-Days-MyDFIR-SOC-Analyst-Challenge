@@ -21,6 +21,6 @@
 3. Go over how to investigate alerts (high-level)
 
 ### Day 1 | How To Create a Logical Diagram
-Diagram Draw.io File: https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/30-days-mydfir-diagram.drawio
+1. [Draw.io file](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/30-days-mydfir-diagram.drawio)
 
-Diagram PDF File: https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/30-days-mydfir-diagram.drawio-1.pdf
+2. [Final Diagram](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/30-days-mydfir-diagram.drawio-1.pdf)
