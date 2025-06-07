@@ -1,0 +1,87 @@
+# 📚 ELK Stack Introduction | Day 2
+
+A quick reference guide to understanding the ELK Stack and its benefits in cybersecurity and observability environments.
+
+
+
+## 📦 What is the ELK Stack?
+
+The ELK Stack consists of three main components:
+
+- **E** – **Elasticsearch**: A distributed, open-source search and analytics engine (database) that uses `ES|QL` (Elasticsearch Piped Query Language).
+- **L** – **Logstash**: A free and open-source data collection engine that gathers telemetry from various sources.
+- **K** – **Kibana**: A user-friendly visualization interface to query, visualize, and manage Elasticsearch data.
+
+
+
+## 🎯 Objective
+
+To gain a solid understanding of the ELK Stack and the benefits it provides in a SIEM or log aggregation environment.
+
+
+
+## ⚙️ Core Components
+
+### 🔍 Elasticsearch
+- Serves as the primary **database** and **search engine**
+- Scalable and fast
+- Uses **ES|QL** for powerful query chaining
+
+### 🔄 Logstash
+- Collects and processes logs or telemetry data
+- Acts as a **data pipeline** to ingest from various sources
+
+### 📊 Kibana
+Kibana is used to:
+- Search and explore Elasticsearch data
+- Create visualizations and dashboards
+- Generate reports
+- Set up alerts and monitoring
+
+
+
+## 📡 Beats – Lightweight Data Shippers
+
+Beats are specialized agents for different types of data:
+
+| Beat Type       | Purpose                     |
+|-----------------|-----------------------------|
+| **Filebeat**     | Log file collection         |
+| **Metricbeat**   | System metrics              |
+| **Packetbeat**   | Network packet capture data |
+| **Winlogbeat**   | Windows event logs          |
+| **Auditbeat**    | Linux audit framework data  |
+| **Heartbeat**    | Service uptime monitoring   |
+
+✅ **Elastic Agent**: A unified agent that combines all Beat functionalities into one.
+
+
+
+## 🔁 ELK Stack vs. Splunk Comparison
+
+| ELK Stack Component  | Equivalent in Splunk       |
+|----------------------|----------------------------|
+| **Elasticsearch**    | Indexer / Search Head      |
+| **Logstash**         | Heavy Forwarder            |
+| **Kibana**           | Web GUI                    |
+| **Beats / Agent**    | Universal Forwarder        |
+
+
+
+## ✅ Benefits of Using ELK Stack
+
+1. **Centralized Logging** – Simplifies log collection for compliance and security monitoring
+2. **Flexibility** – Supports custom ingestion and parsing
+3. **Visualizations** – Enables at-a-glance observability through rich dashboards
+4. **Scalability** – Easily deployable in small to enterprise-scale environments
+5. **Ecosystem** – Well-supported with community plugins and third-party integrations
+
+
+
+## 💡 Bonus Benefit
+
+> Many modern SIEM platforms (like Wazuh, Security Onion, and SIEMonster) are built on top of the ELK Stack.  
+> The more comfortable you are with ELK, the smoother your transition to other SIEMs will be.
+
+
+
