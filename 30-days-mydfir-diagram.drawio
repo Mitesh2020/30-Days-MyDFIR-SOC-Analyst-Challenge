@@ -1,0 +1,116 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0" version="27.1.4">
+  <diagram name="Page-1" id="Wk2JbeJK6rZ-Hee_HNG9">
+    <mxGraphModel dx="1170" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-7" value="" style="rounded=1;whiteSpace=wrap;html=1;glass=0;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="116.75" y="230" width="693" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-1" value="OS Ticket Server" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.traditional_server;fillColor=light-dark(#f66151, #848383);gradientColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="560" width="46.5" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=12 12;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-2" target="5Sf9t4XF8md5nLBMeIR0-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-17" value="Manage Agents" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5Sf9t4XF8md5nLBMeIR0-14">
+          <mxGeometry x="0.1426" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-2" value="Fleet Server" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.traditional_server;fillColor=light-dark(#ffbe6f, #848383);gradientColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="360" width="46.5" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-33" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-3" target="5Sf9t4XF8md5nLBMeIR0-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-3" value="&lt;div&gt;C2 Server&lt;/div&gt;&lt;div&gt;Mythic&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.traditional_server;fillColor=light-dark(#c64600, #848383);gradientColor=none;textShadow=0;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="168.5" y="777" width="46.5" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=12 12;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-4" target="5Sf9t4XF8md5nLBMeIR0-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-16" value="Alerts/Tickets" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5Sf9t4XF8md5nLBMeIR0-15">
+          <mxGeometry x="0.0068" y="-2" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-4" value="Elastic &amp;amp; Kibana" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.traditional_server;fillColor=light-dark(#99c1f1, #848383);gradientColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="440.25" y="560" width="46.5" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-5" target="5Sf9t4XF8md5nLBMeIR0-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-13" value="Managed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5Sf9t4XF8md5nLBMeIR0-11">
+          <mxGeometry x="-0.0627" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-19" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#3584e4, #ededed);dashed=1;dashPattern=12 12;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-21" value="Forward Logs via Agent" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5Sf9t4XF8md5nLBMeIR0-19">
+          <mxGeometry x="-0.1412" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-5" value="&lt;div&gt;Ubuntu Server&amp;nbsp;&lt;/div&gt;&lt;div&gt;SSH Enabled&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.traditional_server;fillColor=light-dark(#f9f06b, #848383);gradientColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="360" width="46.5" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-6" target="5Sf9t4XF8md5nLBMeIR0-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-12" value="Managed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5Sf9t4XF8md5nLBMeIR0-10">
+          <mxGeometry x="-0.1783" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-6" value="&lt;div&gt;Windows Server&amp;nbsp;&lt;/div&gt;&lt;div&gt;RDP Enabled&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.traditional_server;fillColor=light-dark(#8ff0a4, #848383);gradientColor=none;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="360" width="46.5" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-8" value="LOCAL VM SETUP" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=20;labelBackgroundColor=none;textShadow=0;" vertex="1" parent="1">
+          <mxGeometry x="368.5" y="260" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-9" value="VPC" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=0;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="168.5" y="330" width="590" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=light-dark(#3584e4, #ededed);dashed=1;dashPattern=12 12;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-6" target="5Sf9t4XF8md5nLBMeIR0-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-20" value="Forward Logs via Agent" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5Sf9t4XF8md5nLBMeIR0-18">
+          <mxGeometry x="-0.1426" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-22" value="&lt;div align=&quot;left&quot;&gt;Private Network: 172.31.0.0/24&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;IP Range: 172.31.0.1-254&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Subnet Mask: 255.255.255.0&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="570" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-30" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-24" target="5Sf9t4XF8md5nLBMeIR0-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-24" value="Internet" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="248.5" y="880" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-27" value="SOC Analyst Laptop" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.laptop;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="790" width="131" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-28" target="5Sf9t4XF8md5nLBMeIR0-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-28" value="&lt;div&gt;Attacker Laptop&lt;/div&gt;&lt;div&gt;Kali Linux&lt;/div&gt;" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.laptop;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="126.25" y="1030" width="131" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-29" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.948;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5Sf9t4XF8md5nLBMeIR0-27" target="5Sf9t4XF8md5nLBMeIR0-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Sf9t4XF8md5nLBMeIR0-31" value="Connect to Elastic/Kibana via Web GUI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5Sf9t4XF8md5nLBMeIR0-29">
+          <mxGeometry x="0.0435" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
