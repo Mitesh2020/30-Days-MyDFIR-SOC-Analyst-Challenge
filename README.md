@@ -37,3 +37,5 @@
 
 <h4 align="center">DAY 2 | ELK STACK INTRODUCTION</h4>
 
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-2-notes)
+2. [Documentation](https://www.elastic.co/elastic-stack/features)
