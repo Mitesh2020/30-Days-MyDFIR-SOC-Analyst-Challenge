@@ -19,3 +19,5 @@
 1. Introduction to a ticketing system
 2. How to set up and integrate a ticketing system
 3. Go over how to investigate alerts (high-level)
+
+### Day 1 | How To Create a Logical Diagram
