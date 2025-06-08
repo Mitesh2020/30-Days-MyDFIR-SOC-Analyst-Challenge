@@ -27,7 +27,7 @@
 3. Go over how to investigate alerts (high-level)
    
 <br><br>
-<h4 align="center">DAY 1 | HOW TO CREATE A LOGICAL DIAGRAM</h4>
+<h4 align="">DAY 1 | HOW TO CREATE A LOGICAL DIAGRAM</h4>
 
 1. [Draw.io file](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/30-days-mydfir-diagram.drawio)
 
@@ -35,7 +35,14 @@
 
 <br><br>
 
-<h4 align="center">DAY 2 | ELK STACK INTRODUCTION</h4>
+<h4 align="">DAY 2 | ELK STACK INTRODUCTION</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-2-notes)
 2. [Documentation](https://www.elastic.co/elastic-stack/features)
+
+<br><br>
+
+<h4 align="">DAY 3 | ELASTICSEARCH SETUP TUTORIAL</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-3-notes)
+2. [Dowload ElasticSearch](https://www.elastic.co/downloads/elasticsearch)
