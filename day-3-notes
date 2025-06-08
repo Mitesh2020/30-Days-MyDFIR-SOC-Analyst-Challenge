@@ -1,0 +1,109 @@
+# 🚀 Elasticsearch Setup Tutorial | Day 3
+
+This guide walks you through spinning up your own **Elasticsearch** instance on **Ubuntu Server 22.04**.
+
+
+
+## 🎯 Objective
+
+Learn how to install and configure a standalone Elasticsearch node for local or lab use.
+
+
+
+## 🧰 Requirements
+
+- OS: Ubuntu Server 22.04
+- Internet access
+- Basic terminal knowledge
+
+
+
+## 🔧 Step-by-Step Installation
+
+### 1. **Download Elasticsearch .deb Package**
+
+Go to:  
+🔗 [https://www.elastic.co/downloads/elasticsearch](https://www.elastic.co/downloads/elasticsearch)
+
+- Select: **DEB x86_64**
+- Copy the download link  
+- Use `wget` to download in terminal:
+
+```bash
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-<version>-amd64.deb
+````
+
+Replace `<version>` with the actual version number.
+
+
+
+### 2. **Install Elasticsearch**
+
+Run:
+
+```bash
+sudo dpkg -i elasticsearch-<version>-amd64.deb
+```
+
+✅ During installation:
+
+* A **superuser password** will be auto-generated
+* Important instructions will be displayed — **save these to a text file**
+
+
+
+### 3. **Configure Elasticsearch**
+
+Edit the configuration file:
+
+```bash
+sudo nano /etc/elasticsearch/elasticsearch.yml
+```
+
+Uncomment and set the following:
+
+```yaml
+network.host: <your_VM_IP>
+http.port: 9200
+```
+
+Example:
+
+```yaml
+network.host: 192.168.221.130
+http.port: 9200
+```
+
+
+
+### 4. **Enable and Start the Service**
+
+```bash
+sudo systemctl daemon-reexec
+sudo systemctl enable elasticsearch
+sudo systemctl start elasticsearch
+sudo systemctl status elasticsearch
+```
+
+
+
+### ✅ Test the Setup
+
+Run:
+
+```bash
+curl -u elastic https://<your_VM_IP>:9200 --insecure
+```
+
+Enter the password generated during installation.
+
+You should see a JSON response from the Elasticsearch node.
+
+
+
+## 📌 Notes
+
+* Default Elasticsearch runs with security enabled.
+* Make sure port **9200** is open if accessing remotely.
+* Save your **elastic superuser password** and **enrollment token** securely.
+
