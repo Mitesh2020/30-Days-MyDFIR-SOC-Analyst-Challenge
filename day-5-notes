@@ -1,0 +1,35 @@
+# 🪟 Windows Server 2022 Installation | Day 5
+
+## 🎯 Objective
+
+Install **Windows Server 2022** and expose **Remote Desktop Protocol (RDP)** access to the internet for remote administration or lab access.
+
+
+
+## 📝 Task Summary
+
+- Install Windows Server 2022 using VMware or VirtualBox
+- Enable and configure Remote Desktop (RDP)
+- (Optional but risky) Expose RDP to the internet via port forwarding
+
+
+
+## 🎥 No Written Notes — Watch Videos Instead
+
+To complete this step, simply search and watch the following tutorials on **YouTube**:
+
+### 🔍 Suggested Search Queries
+
+- `How to install Windows Server 2022 on VMware`
+- `How to install Windows Server 2022 on VirtualBox`
+- `How to enable RDP on Windows Server 2022`
+
+These tutorials will guide you through:
+- Downloading and mounting the ISO
+- Setting up virtual hardware (CPU, RAM, disk, network)
+- Installing the OS
+- Creating the Administrator account
+- Enabling RDP through system settings
+- Allowing RDP through Windows Firewall
+
+
