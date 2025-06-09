@@ -54,3 +54,9 @@
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-4-notes)
 2. [Dowload Kibana](https://www.elastic.co/downloads/kibana)
 
+<br><br>
+
+<h4 align="">DAY 5 | WINDOWS SERVER 2022 INSTALLATION</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-5-notes)
+
