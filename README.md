@@ -46,3 +46,11 @@
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-3-notes)
 2. [Dowload ElasticSearch](https://www.elastic.co/downloads/elasticsearch)
+
+<br><br>
+
+<h4 align="">DAY 4 | KIBANA SETUP TUTORIAL</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-4-notes)
+2. [Dowload Kibana](https://www.elastic.co/downloads/kibana)
+
