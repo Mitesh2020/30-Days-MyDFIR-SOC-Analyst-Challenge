@@ -1,0 +1,164 @@
+# 📊 Kibana Setup Tutorial | Day 4
+
+This tutorial guides you through installing and configuring your own **Kibana** instance on **Ubuntu Server**, following Day 3’s Elasticsearch setup.
+
+
+
+## 🎯 Objective
+
+Learn how to install and configure Kibana and securely enroll it with your existing Elasticsearch instance.
+
+
+
+## 🧰 Prerequisites
+
+- Elasticsearch already installed and running (refer to Day 3)
+- Ubuntu Server 22.04
+- Internet access and sudo privileges
+
+
+
+## 🔧 Installation Steps
+
+### 1. 📦 Download Kibana
+
+Visit the official Kibana download page:  
+🔗 https://www.elastic.co/downloads/kibana
+
+- Select `.deb x86_64`
+- Copy the link and use `wget` to download:
+
+```bash
+wget https://artifacts.elastic.co/downloads/kibana/kibana-<version>-amd64.deb
+````
+
+* Install the package:
+
+```bash
+sudo dpkg -i kibana-<version>-amd64.deb
+```
+
+
+
+### 2. ⚙️ Configure `kibana.yml`
+
+Edit the configuration file:
+
+```bash
+sudo nano /etc/kibana/kibana.yml
+```
+
+Uncomment and update:
+
+```yaml
+server.port: 5601
+server.host: "<your_VM_IP>"
+```
+
+
+
+### 3. 🚀 Start Kibana Service
+
+```bash
+sudo systemctl daemon-reexec
+sudo systemctl enable kibana
+sudo systemctl start kibana
+sudo systemctl status kibana
+```
+
+
+
+## 🔐 Secure Enrollment with Elasticsearch
+
+### 4. Generate Enrollment Token from Elasticsearch
+
+```bash
+cd /usr/share/elasticsearch/bin/
+sudo ./elasticsearch-create-enrollment-token --scope kibana
+```
+
+Copy the generated token.
+
+
+
+### 5. Access Kibana UI
+
+In your browser, go to:
+
+```http
+http://<your_VM_IP>:5601
+```
+
+Paste the **enrollment token** when prompted.
+
+
+
+### 6. Enter Verification Code
+
+Get the verification code by running:
+
+```bash
+cd /usr/share/kibana/bin/
+sudo ./kibana-verification-code
+```
+
+Enter the 6-digit code in the browser.
+
+
+
+### 7. Login Using Elasticsearch Credentials
+
+Use the `elastic` username and password saved during Elasticsearch installation (Day 3).
+
+
+
+## 🛡️ Optional but Recommended: Add Encryption Keys
+
+To avoid API integration errors and secure saved objects:
+
+### 8. Generate Encryption Keys
+
+```bash
+sudo ./kibana-encryption-keys generate
+```
+
+Copy the 3 values:
+
+* `xpack.encryptedSavedObjects.encryptionKey`
+* `xpack.reporting.encryptionKey`
+* `xpack.security.encryptionKey`
+
+
+
+### 9. Add Keys to Kibana Keystore
+
+Run the following for each key:
+
+```bash
+sudo ./kibana-keystore add xpack.encryptedSavedObjects.encryptionKey
+# Paste the key when prompted
+
+sudo ./kibana-keystore add xpack.reporting.encryptionKey
+# Paste the key
+
+sudo ./kibana-keystore add xpack.security.encryptionKey
+# Paste the key
+```
+
+
+
+### 10. Restart Kibana to Apply Changes
+
+```bash
+sudo systemctl restart kibana
+```
+
+
+
+## ✅ Final Notes
+
+* Ensure Elasticsearch is running and accessible to Kibana.
+* Always save your credentials and keys securely.
+* Encryption keys prevent Kibana API integration issues and enable secure data storage.
+
+
