@@ -1,0 +1,77 @@
+# 🚀 Elastic Agent and Fleet Server Introduction | Day 6
+
+## 🎯 Objective
+
+Understand what an **Elastic Agent** and **Fleet Server** are, and how they simplify log, metric, and security data collection in the **Elastic Stack**.
+
+
+
+## 📦 What is Elastic Agent?
+
+The **Elastic Agent** is a unified, all-in-one agent that:
+- Collects **logs**, **metrics**, and **security data**
+- Supports **endpoint protection** and **threat prevention**
+- Replaces traditional **Beats** (like Filebeat, Metricbeat) by consolidating their capabilities into one installable agent
+
+
+
+## ⚙️ Modes of Deployment
+
+Elastic Agent can be deployed in **two modes**:
+
+### 1. 🧠 Managed by Fleet (Recommended)
+- Agent is managed centrally using the **Fleet UI** in Kibana
+- Policies and configuration are pushed from a central location
+- Supports **automatic updates**, **monitoring**, and **scaling**
+- Ideal for large-scale environments and dynamic infrastructure
+
+### 2. ⚙️ Standalone Mode
+- No centralized management
+- All configuration is done **locally** using YAML files
+- Offers more **manual control**, but requires more maintenance
+
+
+
+## 🔄 Beats vs Elastic Agent
+
+| Feature              | Beats                           | Elastic Agent                     |
+|-|-|--|
+| Individual Tools     | Separate Beats for each use case | One single binary                 |
+| Management           | Manual config per Beat           | Centrally managed via Fleet (optional) |
+| Use Cases            | Logs, metrics, etc. per Beat     | Logs, metrics, security, EDR, and more |
+| Deployment           | Lightweight, minimal control     | Central control + endpoint security |
+| Updates              | Manual per Beat                  | Centralized and automated         |
+
+
+
+## 🌐 What is Fleet Server?
+
+The **Fleet Server** is a component of the Elastic Stack that:
+
+- Acts as a **central communication bridge** between Elastic Agents and the Kibana Fleet UI
+- Is responsible for:
+  - Distributing configuration policies to agents
+  - Collecting monitoring status and logs from agents
+  - Simplifying onboarding and scaling of agents
+- Installed as a separate service and registered to the Elastic Stack
+
+
+
+## ✅ Key Benefits
+
+- One agent for everything (versus installing multiple Beats)
+- Easier scalability via centralized control
+- Better visibility into agent health and status
+- Built-in support for **endpoint protection** and **malware prevention**
+
+
+
+## 📌 Summary
+
+Elastic Agent and Fleet Server represent the next-generation data collection and endpoint management tools within the Elastic Stack.
+
+- Use **Fleet-managed mode** for centralized control, especially in large environments
+- Use **Standalone mode** for maximum flexibility (with more setup)
+- Replace Beats with Elastic Agent for modern, scalable observability and security
+
+
