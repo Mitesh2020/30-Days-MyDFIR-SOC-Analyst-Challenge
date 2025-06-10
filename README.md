@@ -66,4 +66,10 @@
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-6-notes)
 
+<br><br>
+
+<h4 align="">DAY 7 | ELASTIC AGENT AND FLEET SERVER SETUP TUTORIAL</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-7-notes)
+2. [If any error encountered, watch this](https://youtu.be/GWX19cpv21w?si=owm7vZac1anv4zxF)
 
