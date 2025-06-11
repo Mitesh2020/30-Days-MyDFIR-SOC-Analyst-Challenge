@@ -1,0 +1,108 @@
+# ⚙️ Sysmon Setup Tutorial | Day 9
+
+## 🎯 Objective
+
+Install **Sysmon** on a **Windows Server** and confirm that it is collecting system telemetry for security monitoring.
+
+
+
+## 📦 What is Sysmon?
+
+**Sysmon (System Monitor)** is a Windows system service and device driver that logs detailed information about process creation, network connections, file changes, and more—useful for threat detection and incident response.
+
+
+
+## 🧰 Prerequisites
+
+- Windows Server 2022 (or compatible)
+- Administrator privileges
+- Internet access
+
+
+
+## 🛠️ Installation Steps
+
+### 1. 📥 Download Sysmon
+
+Go to the official Sysinternals download page:
+
+🔗 https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+
+- Download the ZIP file
+- Extract its contents (you’ll get `Sysmon64.exe` and `Sysmon.exe`)
+
+
+
+### 2. 📥 Download Sysmon Configuration File
+
+Use a modular and community-maintained Sysmon config:
+
+🔗 https://github.com/olafhartong/sysmon-modular
+
+- Download the `sysmonconfig.xml` from the repo
+- Place it in the same folder where `Sysmon64.exe` is located
+
+
+
+### 3. 📂 Prepare the Folder
+
+You should now have:
+
+```text
+C:\Tools\Sysmon\
+  ├── Sysmon64.exe
+  ├── Eula.txt
+  └── sysmonconfig.xml
+````
+
+
+
+### 4. 🖥️ Install Sysmon with the Configuration
+
+Open **PowerShell as Administrator**, navigate to the Sysmon folder, and run:
+
+```powershell
+cd "C:\Tools\Sysmon"
+.\Sysmon64.exe -i sysmonconfig.xml
+```
+
+* Accept the license prompt by typing `Agree` when asked
+
+✅ If successful, Sysmon will be installed as a Windows service and will begin collecting telemetry based on your XML config.
+
+
+
+## 📊 Verifying Installation
+
+1. Open **Event Viewer**
+2. Navigate to:
+
+```
+Applications and Services Logs → Microsoft → Windows → Sysmon → Operational
+```
+
+3. You should begin to see event logs like:
+
+   * Event ID 1 → Process Creation
+   * Event ID 3 → Network Connections
+   * Event ID 10 → Process Access
+   * Event ID 22 → DNS Queries
+
+
+
+## ✅ Summary
+
+| Task                         | Completed |
+| - |  |
+| Downloaded Sysmon            | ✅         |
+| Downloaded sysmonconfig.xml  | ✅         |
+| Installed Sysmon with config | ✅         |
+| Confirmed event logging      | ✅         |
+
+
+
+## 📚 Useful Links
+
+* [Sysmon Docs](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+* [Sysmon Modular Config Repo](https://github.com/olafhartong/sysmon-modular)
+
