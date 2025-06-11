@@ -1,0 +1,57 @@
+# 🧩 What is Sysmon? | Day 8
+
+## 🎯 Objective
+
+Understand what **Sysmon (System Monitor)** is, its capabilities, and how it plays a critical role in detecting suspicious activity on Windows systems.
+
+
+
+## 🛡️ What is Sysmon?
+
+**Sysmon** is a system monitoring tool from Microsoft’s **Sysinternals Suite**. Once installed, it logs detailed Windows events to the **Windows Event Log**, allowing security teams and SOC analysts to **detect and investigate advanced threats and anomalous behavior**.
+
+Sysmon runs as a **Windows service** and provides visibility into various system-level activities that are not captured by default logs.
+
+
+
+## 🔍 Key Capabilities of Sysmon
+
+| Capability                | Description                                                                 |
+||--|
+| Process monitoring        | Tracks process creations, command-line arguments, parent-child relationships |
+| Network connections       | Logs TCP/UDP connections, IPs, ports, and related processes                 |
+| Driver & image loading    | Detects unsigned or unexpected driver and DLL loads                         |
+| Thread injection          | Helps detect code injection and remote thread creation                      |
+| File modifications        | Tracks file creation and changes (if configured)                            |
+| Registry monitoring       | Detects key modifications (custom config required)                          |
+| DNS queries               | Monitors DNS lookups made by processes (useful for detecting C2)            |
+
+
+
+## 🧾 Important Event IDs to Remember
+
+| Event ID | Event Type             | Description                                              |
+|-||-|
+| `1`      | **Process Creation**   | Logs when a new process starts, including CLI, parent ID |
+| `3`      | **Network Connection** | Logs outbound TCP/UDP connections from local processes   |
+| `6/7/8`  | **Driver/Image/Thread**| Logs driver load, DLL injection, remote thread creation  |
+| `10`     | **Process Access**     | Detects when a process tries to access another process   |
+| `22`     | **DNS Events**         | Captures DNS query logs made by local processes          |
+
+> These logs can be viewed in **Event Viewer > Applications and Services Logs > Microsoft > Windows > Sysmon > Operational**
+
+
+
+## 🔧 Why Use Sysmon?
+
+- 🔍 Detect **malware**, **lateral movement**, **privilege escalation**, and **data exfiltration**
+- 🧠 Supports **behavior-based detection**
+- 🧩 Easily integrates with SIEMs (like **Wazuh**, **Elastic Stack**, **Splunk**)
+- ✍️ Works well with custom rule sets (e.g., **SwiftOnSecurity** Sysmon config)
+
+
+
+## 📌 Summary
+
+**Sysmon** provides deep, real-time visibility into what's happening on your system beyond what traditional event logs can offer. It's a lightweight but powerful tool that helps defenders detect threats early by capturing critical system events.
+
