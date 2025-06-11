@@ -79,3 +79,10 @@
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-8-notes)
 2. [Sysmon Documentation](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+
+<br><br>
+
+<h4 align="">DAY 9 | SYSMON SETUP TUTORIAL</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-9-notes)
+
