@@ -91,3 +91,9 @@
 <h4 align="">DAY 10 | ELASTICSEARCH INGEST DATA TUTORIAL</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-10-notes)
+
+<br><br>
+
+<h4 align="">DAY 11 | WHAT IS A BRUTE FORCE ATTACK?</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-11-notes)
