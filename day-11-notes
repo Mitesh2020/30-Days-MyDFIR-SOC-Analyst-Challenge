@@ -1,0 +1,79 @@
+# 🛡️ What is a Brute Force Attack? | Day 11
+
+## 🎯 Objective
+
+Understand what **brute force attacks** are, explore their types, learn about common tools used, and discover how to protect yourself from such attacks.
+
+
+
+## 🔐 What is a Brute Force Attack?
+
+A **brute force attack** is a trial-and-error method used to **guess login credentials, encryption keys, or hidden data** by systematically trying every possible combination until the correct one is found.
+
+It is one of the oldest and most basic forms of cyberattacks, often used to compromise weak or reused passwords.
+
+
+
+## 📚 Types of Brute Force Attacks
+
+### 1. 🔠 Standard Brute Force
+- Attempts **all possible combinations** of characters.
+- Can take a long time depending on password complexity.
+
+### 2. 📖 Dictionary Attack
+- Uses a **predefined wordlist** of commonly used passwords or phrases.
+- Faster than standard brute force but limited to known or leaked credentials.
+- Often combined with **credential dumping** and password reuse tactics.
+
+### 3. 🔄 Credential Stuffing
+- Involves using **previously leaked credentials** from data breaches.
+- Automates login attempts across multiple services to exploit reused credentials.
+
+
+
+## 🧪 Common Brute Force Tools
+
+| Tool           | Description                                               |
+|-|--|
+| **Hydra**      | Fast and flexible network login cracker                   |
+| **Hashcat**    | Advanced password recovery tool for cracking hashes       |
+| **John the Ripper** | Versatile password cracker used for brute force and dictionary attacks |
+
+
+
+## 🛡️ How to Protect Against Brute Force Attacks
+
+1. **Use Long & Complex Passwords**
+   - Use passphrases of **15+ characters**
+   - Include uppercase, lowercase, numbers, and symbols
+
+2. **Enable Multi-Factor Authentication (MFA)**
+   - Adds a second layer of protection (OTP, Authenticator app, etc.)
+
+3. **Be Vigilant**
+   - Avoid reusing passwords across multiple sites
+   - Monitor account activity
+   - Change passwords if a service is breached
+
+4. **Account Lockouts & Rate Limiting**
+   - Prevent repeated login attempts after several failures
+
+5. **Use CAPTCHA & IP Blacklisting**
+   - Stops automated tools from brute-forcing login forms
+
+
+
+## 🔍 Real-World Scenarios
+
+- Attackers brute-forcing SSH or RDP credentials on exposed servers
+- Credential stuffing on social media or banking platforms using leaked data
+- Cracking stolen password hashes from compromised databases
+
+
+
+## ✅ Summary
+
+Brute force attacks may be simple, but they are still widely used and **effective against weak security practices**. A combination of **strong authentication**, **good password hygiene**, and **multi-factor protection** is essential to defend against them.
+
+
+
