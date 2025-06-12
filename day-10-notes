@@ -1,0 +1,135 @@
+# 📥 Elasticsearch Ingest Data Tutorial | Day 10
+
+## 🎯 Objective
+
+Learn how to ingest **Sysmon** and **Windows Defender** logs into **Elasticsearch** using the **Fleet + Elastic Agent** integration in Kibana.
+
+
+
+## ✅ Prerequisites
+
+- Elasticsearch, Kibana, and Fleet Server running
+- Windows Server 2022 with Elastic Agent installed and enrolled in Fleet
+- Custom Agent Policy (`windows-policy`) already created
+
+
+
+## 🛠️ Step-by-Step Guide
+
+### 🖥️ Step 1: Log into Kibana
+
+Navigate to your Kibana instance:
+
+```
+
+http\://<your-elasticsearch-vm-ip>:5601
+
+```
+
+
+
+### 🔍 Step 2: Add Sysmon Integration
+
+1. Click on **Integrations**
+2. Search for **"windows"**
+3. Select **Custom Windows Event Logs**
+4. Click **"Add Custom Windows Event Logs"**
+5. Fill out:
+   - **Integration Name**: `win-sysmon`
+   - **Description**: `Collect sysmon logs`
+
+6. Find **Channel Name**:
+   - On your **Windows Server 2022 VM**:
+     - Open **Event Viewer**
+     - Navigate to:  
+       `Applications and Services Logs → Microsoft → Windows → Sysmon`
+     - Right-click **Operational** → **Properties**
+     - Copy the **Full Name** (Channel name)
+
+7. Paste this channel name in Kibana
+8. Under **"Where to add this integration"**, select:
+   - `windows-policy`
+9. Click **Save and continue**
+
+
+
+### 🛡️ Step 3: Add Windows Defender Integration
+
+Repeat similar steps:
+
+1. Go back to **Integrations**
+2. Search for **Windows Defender**
+3. Select **Custom Windows Event Logs**
+4. Click **"Add Custom Windows Event Logs"**
+5. Fill out:
+   - **Integration Name**: `win-defender`
+   - **Description**: `Collect defender logs`
+
+6. Find **Channel Name**:
+   - On the Windows VM:
+     - Go to:  
+       `Applications and Services Logs → Microsoft → Windows → Windows Defender`
+     - Right-click **Operational** → **Properties**
+     - Copy the **Full Name**
+
+7. In Kibana, paste the channel name
+8. Under **Advanced Options**, set **Event IDs**:
+```
+
+1116,1117,5001
+
+````
+
+#### 📘 What These Event IDs Mean:
+
+| Event ID | Description                                                             |
+|-|-|
+| `1116`   | Malware was detected by Windows Defender                                |
+| `1117`   | Malware detection was resolved (e.g., quarantined or removed)           |
+| `5001`   | Windows Defender real-time protection feature has been disabled         |
+
+> These logs are valuable for detecting malware activity and changes to endpoint protection status.
+
+9. Under **Where to add this integration**, choose:
+- `windows-policy`
+10. Click **Save and continue**
+
+
+
+## 🔍 Step 4: Verify Log Ingestion
+
+1. In Kibana, go to **Discover**
+2. Use the following filters to confirm logs are being received:
+
+- **For Sysmon logs**:
+  ```text
+  winlog.event_id: 1
+  ```
+
+- **For Windows Defender logs**:
+  ```text
+  winlog.event_id: 5001
+  ```
+
+
+
+## ⚠️ Important Notes
+
+- 🛑 **Disable Real-Time Protection** on the Windows Server VM to generate Defender logs:
+- Go to **Windows Security → Virus & Threat Protection → Manage Settings**
+- Toggle **Real-time Protection** off
+
+- 🔁 **Fleet Server must be running**
+- Without it, logs from the Windows Server will **not** reach Elasticsearch.
+
+
+
+## 📌 Summary
+
+| Integration        | Source              | Event IDs              | Policy Used      |
+|--||-||
+| win-sysmon         | Sysmon Logs         | `1` (and others)        | `windows-policy` |
+| win-defender       | Windows Defender    | `1116,1117,5001`        | `windows-policy` |
+
+
+
