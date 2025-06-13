@@ -1,0 +1,105 @@
+# 🐧 Ubuntu Server 24.02 Installation | Day 12
+
+## 🎯 Objective
+
+1. Install and set up an **SSH Server** on Ubuntu Server 24.02  
+2. Learn how to **view authentication logs** to monitor login attempts and security events
+
+
+
+## 🛠️ Step 1: Install Ubuntu Server 24.02
+
+1. Download the ISO from the official Ubuntu website:  
+   🔗 https://ubuntu.com/download/server
+
+2. Create a VM using **VirtualBox** or **VMware**
+   - Assign minimum: 2 CPU cores, 4 GB RAM, and 20 GB disk
+   - Use "Bridged" or "NAT" networking
+
+3. Follow on-screen prompts:
+   - Set username, password, and hostname
+   - Choose **OpenSSH Server** during installation
+   - Skip snap packages for now (optional)
+
+
+
+## 🔐 Step 2: Install or Verify SSH Server
+
+If you didn’t install OpenSSH during setup:
+
+```bash
+sudo apt update
+sudo apt install openssh-server
+````
+
+Check SSH service status:
+
+```bash
+sudo systemctl status ssh
+```
+
+Start and enable SSH:
+
+```bash
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
+
+
+
+## 🌐 Step 3: Connect via SSH
+
+From another system (Linux/macOS/WSL):
+
+```bash
+ssh <username>@<ubuntu-ip-address>
+```
+
+If using Windows, you can use:
+
+* `PowerShell`: `ssh user@ip`
+* Tools like **PuTTY** or **Termius**
+
+
+
+## 🕵️ Step 4: View Authentication Logs
+
+Authentication logs are stored in:
+
+```bash
+/var/log/auth.log
+```
+
+### View login attempts:
+
+```bash
+sudo cat /var/log/auth.log | grep ssh
+```
+
+Or monitor live with:
+
+```bash
+sudo tail -f /var/log/auth.log
+```
+
+Look out for:
+
+* `Accepted password for ...` → successful login
+* `Failed password for ...` → failed login attempt
+* `Invalid user ...` → unauthorized user attempt
+
+
+
+## 📌 Summary
+
+| Task                 | Command/Path                      |
+| -- |  |
+| Install SSH Server   | `sudo apt install openssh-server` |
+| SSH Status           | `sudo systemctl status ssh`       |
+| SSH Logs             | `/var/log/auth.log`               |
+| Tail Auth Log (live) | `sudo tail -f /var/log/auth.log`  |
+| Connect via SSH      | `ssh user@<server-ip>`            |
+
+
+
+
