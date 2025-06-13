@@ -97,3 +97,9 @@
 <h4 align="">DAY 11 | WHAT IS A BRUTE FORCE ATTACK?</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-11-notes)
+
+<br><br>
+
+<h4 align="">DAY 12 | UBUNTU SERVER 24.04 INSTALLATION</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-12-notes)
