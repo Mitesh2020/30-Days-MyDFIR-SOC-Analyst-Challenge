@@ -103,3 +103,10 @@
 <h4 align="">DAY 12 | UBUNTU SERVER 24.04 INSTALLATION</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-12-notes)
+
+<br><br>
+
+<h4 align="">DAY 13 | HOW TO INSTALL ELASTIC AGENT ON UBUNTU</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-13-notes)
+2. [Expected Output](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-13-output.png)
