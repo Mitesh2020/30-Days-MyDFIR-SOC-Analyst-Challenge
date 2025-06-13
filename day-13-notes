@@ -1,0 +1,134 @@
+# 📦 How To Install Elastic Agent on Ubuntu | Day 13
+
+## 🎯 Objective
+
+Install the **Elastic Agent** on an **Ubuntu Server** and verify its ability to collect logs and detect events like failed SSH login attempts.
+
+
+
+## ✅ Prerequisites
+
+- Elasticsearch, Kibana, and Fleet Server set up and running
+- Ubuntu Server (22.04 or later)
+- Fleet Server accessible from Ubuntu Server IP
+
+
+
+## 🛠️ Step-by-Step Guide
+
+### 🖥️ Step 1: Create an Agent Policy in Kibana
+
+1. Navigate to Kibana in your browser:
+
+```
+
+http\://<your-elasticsearch-vm-ip>:5601
+
+```
+
+2. Go to:
+
+```
+
+Management → Fleet → Agent policies
+
+```
+
+3. Click **Create agent policy**
+
+4. Name the policy:
+
+```
+
+Linux Policy
+
+```
+
+5. Click **Create agent policy**
+
+
+
+### 📥 Step 2: Add Elastic Agent to Ubuntu Server
+
+1. Go to:
+
+```
+
+Fleet → Agents → Add agent
+
+````
+
+2. Choose your newly created **Linux Policy**
+
+3. Copy the **Linux TAR command** shown (not DEB or RPM), and run it in your Ubuntu terminal.
+
+Example:
+
+```bash
+curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-<version>-linux-x86_64.tar.gz
+tar xzvf elastic-agent-<version>-linux-x86_64.tar.gz
+cd elastic-agent-<version>-linux-x86_64
+sudo ./elastic-agent install --url=https://<fleet-server-ip>:8220 --enrollment-token=<your-token> --insecure
+````
+
+✅ **Important**: Add `--insecure` at the end of the install command to avoid TLS certificate errors during testing.
+
+
+
+### 🧪 Step 3: Verify Elastic Agent is Working
+
+1. Go to **Kibana → Discover**
+
+2. Use the filter:
+
+   ```
+   agent.name: "<your-ubuntu-agent-name>"
+   ```
+
+This confirms that the agent has been successfully enrolled and is sending data.
+
+
+
+### 🔐 Step 4: Simulate an Authentication Failure
+
+From your **Elasticsearch/Kibana VM**, try to SSH into your Ubuntu Server using wrong credentials:
+
+```bash
+ssh wronguser@<ubuntu-vm-ip>
+```
+
+
+
+### 🔍 Step 5: Check for Authentication Failure Log
+
+1. Go to **Discover** in Kibana
+
+2. Use the filter:
+
+   ```text
+   host.ip: "<ubuntu-vm-ip>" AND message: "authentication failure"
+   ```
+
+If everything is working, you will see logs related to failed login attempts.
+
+
+
+### ✅ Sample Output
+
+> *(Insert screenshot here showing the log entry in Kibana’s Discover panel)*
+
+
+
+## 🧾 Summary
+
+| Step                       | Description                              |
+| -- | - |
+| Create Agent Policy        | `Linux Policy` in Fleet                  |
+| Install Elastic Agent      | Run TAR-based install on Ubuntu VM       |
+| Add `--insecure` flag      | Prevents TLS errors                      |
+| Confirm Agent Status       | Filter `agent.name` in Discover          |
+| Test SSH Attack Simulation | Try failed login from another machine    |
+| Check Logs                 | Use Kibana Discover to find auth failure |
+
+
+
