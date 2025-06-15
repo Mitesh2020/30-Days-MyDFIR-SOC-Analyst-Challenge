@@ -110,3 +110,9 @@
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-13-notes)
 2. [Expected Output](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-13-output.png)
+
+<br><br>
+
+<h4 align="">DAY 14 | HOW TO CREATE ALERTS AND DASHBOARD IN KIBANA</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-14-notes)
