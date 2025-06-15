@@ -1,0 +1,48 @@
+# 🖥️ Day 15 - Remote Desktop Protocol (RDP) Introduction
+
+## 🎯 Objective
+
+Understand what **Remote Desktop Protocol (RDP)** is, its common use cases, how attackers exploit it, and how to secure RDP-enabled systems.
+
+
+
+## 📘 What is RDP?
+
+- RDP (Remote Desktop Protocol) is a Microsoft protocol that allows users to connect to another computer over a network connection using a graphical interface.
+- Commonly used for **remote administration**, **technical support**, and **remote access**.
+
+
+
+## 🔓 How Attackers Abuse RDP
+
+Attackers commonly exploit exposed or poorly secured RDP endpoints to:
+- **Brute force** weak passwords
+- Deploy **ransomware** or other malware
+- Gain **unauthorized access** to internal networks
+- Perform **lateral movement** within compromised environments
+
+They often find exposed RDP services using tools like:
+- **Shodan**
+- **Censys**
+- **Masscan**
+- **Nmap**
+
+
+
+## 🛡️ Best Practices to Secure RDP
+
+1. **Turn off RDP** if not needed.
+2. Enable **Multi-Factor Authentication (MFA)** for remote access.
+3. **Restrict RDP access** using firewalls, VPNs, or IP whitelisting.
+4. Enforce **strong, complex passwords**.
+5. **Rename or disable default accounts** like "Administrator".
+
+
+
+## 🧠 Learnings
+
+- RDP is powerful but can be dangerous if left exposed or misconfigured.
+- Awareness of common attacker techniques helps in defending systems.
+- Proactive measures can significantly reduce RDP-related risks.
+
+
