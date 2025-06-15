@@ -1,0 +1,83 @@
+# 🔐 Day 14 - Creating Alerts and Dashboards in Kibana
+
+## 🎯 Objective
+Create an alert and dashboard in Kibana to detect **SSH brute force attempts** based on failed login patterns.
+
+
+
+## 📌 Key Fields for Detection
+- `failed attempts`
+- `user`
+- `source.ip`
+
+
+
+## ✅ Steps to Create Alert
+
+1. Open Kibana in your browser:
+```
+
+http\://<your-elasticsearch-vm-ip>:5601
+
+````
+
+2. Navigate to the **Discover** section.
+
+3. Run the following search query:
+```kibana
+host.ip: "<your-ubuntu-vm-ip>" AND message: "authentication failure"
+````
+
+4. On the top-right corner, click the **Save** button.
+
+   * Give your query a meaningful title.
+   * Click **Save** to store the query for alerting.
+
+5. Click on the **Alerts** tab (next to "Inspect").
+
+6. Click on **Create search threshold rule**.
+
+   * Provide a **name** for the alert (e.g., `SSH Brute Force Alert`).
+   * Use the same query from Step 3.
+   * Test the query and **Save** the alert rule.
+
+
+
+## ⚠️ Note
+
+* Dashboard was not created in this step due to **local setup limitations**, where simulated SSH brute force attempts from different countries or IPs are not feasible.
+
+
+
+## 📅 Day 13 Reference Query Used
+
+```kibana
+host.ip: "<your-ubuntu-vm-ip>" AND message: "authentication failure"
+```
+
+
+
+## 📂 Files
+
+> *No files committed in this step — alert created through Kibana GUI.*
+
+
+
+## 🚧 Next Steps
+
+* Set up log generation for SSH attacks using tools like `hydra` or `Crowbar`.
+* Once you have varied attack data, proceed to create a **dashboard** with visualizations on:
+
+  * Top failed usernames
+  * Source IPs
+  * Attack frequency over time
+
+
+
+## 🧠 Learnings
+
+* Created a **search threshold alert** in Kibana.
+* Understood how to identify SSH brute-force attempts using login failure patterns.
+* Learned alert creation even in limited environments (local test setup).
+
+
