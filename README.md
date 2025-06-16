@@ -113,7 +113,7 @@
 
 <br><br>
 
-<h4 align="">DAY 14 | HOW TO CREATE ALERTS AND DASHBOARD IN KIBANA</h4>
+<h4 align="">DAY 14 | HOW TO CREATE ALERTS AND DASHBOARD IN KIBANA PART 1</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-14-notes)
 
@@ -122,3 +122,9 @@
 <h4 align="">DAY 15 | REMOTE DESKTOP PROTOCOL INTRODUCTION</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-15-notes)
+
+<br><br>
+
+<h4 align="">DAY 16 | HOW TO CREATE ALERTS AND DASHBOARD IN KIBANA PART 2</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-16-notes)
