@@ -1,0 +1,49 @@
+# 📊 Day 16 - Create Alerts and Dashboards in Kibana (Windows Authentication Logs)
+
+## 🎯 Objective
+
+Observe authentication logs from a Windows Server and create alerts for failed RDP login attempts using Kibana.
+
+
+
+## 🪪 Steps to Monitor Windows RDP Failures
+
+1. Follow the same steps as **Day 15**, but this time for the Windows Server's logs.
+2. In **Kibana > Discover**, use the following query to detect failed RDP logins:
+   ```text
+   event.code: 4625
+````
+
+> Windows Event ID `4625` indicates a failed login attempt.
+
+3. Go to the **Alerts** section and click **Create search threshold rule**.
+
+   * Use the above query.
+   * Set a meaningful alert name and parameters.
+4. If you want to set up detection rules in the **Security** section of Kibana (SIEM), refer to this helpful video:
+   🎥 [Create Detection Rules in Kibana (YouTube)](https://youtu.be/11eBIfDeZ7k?si=hhxVmtUxp73gzBR9)
+5. Once set up, you’ll find triggered alerts under:
+
+   ```
+   Security > Alerts
+   ```
+
+   with full event details.
+
+
+
+## 📷 Sample Output
+
+> *(Image will be added here to demonstrate the alert visualization in Kibana)*
+
+
+
+## ⚠️ Note
+
+Due to the limitations of using local VMs for this lab:
+
+* I successfully implemented **SSH brute-force detection** on the Ubuntu server.
+* **RDP alert testing** on the Windows Server was not performed due to lack of external access.
+
+
+
