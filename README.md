@@ -134,3 +134,9 @@
 <h4 align="">DAY 17 | HOW TO CREATE ALERTS AND DASHBOARD IN KIBANA PART 3</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-17-notes)
+
+<br><br>
+
+<h4 align="">DAY 18 | COMMAND AND CONTROL INTRODUCTION</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-18-notes)
