@@ -1,0 +1,54 @@
+# Command and Control (C2) Introduction | Day 18
+
+## 🎯 Objective
+Understand the fundamentals of Command and Control (C2), its importance in cybersecurity, common tools and frameworks, and an overview of the Mythic C2 platform.
+
+
+
+## 📘 What is Command and Control (C2)?
+
+Command and Control (C2) is a technique used by attackers to communicate with compromised systems. It allows them to:
+- Exfiltrate data
+- Execute commands remotely
+- Maintain persistence
+- Coordinate attacks
+
+
+
+## ❗ Why is C2 Important?
+
+- A critical phase in the **cyber kill chain**
+- Enables **post-exploitation** control
+- Used in **APT** attacks, ransomware, and red team operations
+- Detection of C2 activity is key to identifying ongoing intrusions
+
+
+
+## 🛠️ Popular C2 Tools and Frameworks
+
+- **Mythic**
+- Cobalt Strike
+- Metasploit
+- Empire
+- Covenant
+- Sliver
+
+
+
+## 👀 What is Mythic?
+
+**Mythic** is an open-source, extensible C2 platform designed for red teaming operations. It supports:
+- Multiple payload types
+- Web-based UI for real-time operations
+- Secure communication channels
+- Plugin system for custom functionality
+
+### 🔧 How Mythic Works:
+1. Setup a Mythic server (commonly via Docker)
+2. Generate a payload
+3. Deploy to target
+4. Receive beacons and interact via UI
+
+
+
+
