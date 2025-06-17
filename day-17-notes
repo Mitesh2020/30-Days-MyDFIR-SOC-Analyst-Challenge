@@ -1,0 +1,14 @@
+# How To Create Alerts and Dashboards in Kibana | Day 17
+
+## 🎯 Objective
+Create a dashboard in Kibana for RDP (Remote Desktop Protocol) activity monitoring.
+
+## 📌 Note
+I skipped this step as I’m currently using a local VM. If you're using a cloud VM, you can follow the full process.
+
+## 📹 Reference Video
+Follow this guide to create an RDP dashboard:
+👉 [Watch here](https://youtu.be/pAfIi6Z6a2g?si=r8X8ICMMmCbOvtmY)
+
+
+
