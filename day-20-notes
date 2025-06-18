@@ -1,0 +1,89 @@
+# 🧠 Mythic Server Setup Tutorial | Day 20
+
+## 🎯 Objective
+Set up the **Mythic Command and Control (C2) Server** and understand how it works in a red team or adversary emulation context.
+
+
+
+## 🧰 Prerequisites
+- ✅ A fresh **Ubuntu Server** VM for the Mythic server
+- ✅ An **attacker machine** (e.g., Kali Linux or Parrot OS)
+- ✅ Internet access and `sudo` privileges on your server
+
+
+
+## 🛠️ Setup Steps
+
+### Step 1: Prepare Ubuntu Server
+```bash
+sudo apt update && sudo apt upgrade -y
+````
+
+### Step 2: Install Required Dependencies
+
+```bash
+sudo apt install docker-compose -y
+sudo apt install make -y
+```
+
+### Step 3: Clone and Install Mythic
+
+```bash
+git clone https://github.com/its-a-feature/Mythic
+cd Mythic
+./install_docker_ubuntu.sh
+```
+
+### Step 4: Check Docker Status
+
+```bash
+sudo systemctl status docker
+# If not running:
+sudo systemctl restart docker
+```
+
+### Step 5: Start Mythic
+
+```bash
+make
+./mythic-cli start
+```
+
+
+
+## 🌐 Access the Mythic Web Interface
+
+Open your browser and navigate to:
+
+```
+https://<your-mythic-server-ip>:7443
+```
+
+### Default Credentials
+
+* **Username**: `mythic_admin`
+* **Password**: Check the `.env` file inside the `Mythic` directory:
+
+  ```bash
+  cat .env | grep MYTHIC_ADMIN_PASSWORD
+  ```
+
+📖 Official Mythic Installation Guide:
+👉 [Mythic Documentation](https://docs.mythic-c2.net/installation)
+
+
+
+## 🧪 What You Learn
+
+* Mythic server deployment
+* C2 communication basics
+* Command channel control
+* Operator panel access
+
+
+
+## 📌 Notes
+
+* Parrot OS was already installed as the attacker VM, so I skipped its setup.
+* Ensure port `7443` is open if accessing the server externally.
+
