@@ -148,3 +148,11 @@
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-19-notes)
 2. [Draw.io file](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/Attack%20Diagram.drawio)
 3. [PDF file](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/Attack%20Diagram.drawio.pdf)
+
+<br><br>
+
+<h4 align="">DAY 20 | MYTHIC SERVER SETUP TUTORIAL</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-20-notes)
+
+<br><br>
