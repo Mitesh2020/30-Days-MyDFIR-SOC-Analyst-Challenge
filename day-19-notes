@@ -1,0 +1,33 @@
+# 🛡️ How To Create an Attack Diagram | Day 19
+
+## 🎯 Objective
+Create an **attack diagram** that visually maps out your plan of attack for a simulated or real-world lab environment.
+
+
+
+## 🛠️ Tools Used
+- [**draw.io**](https://app.diagrams.net/) – A free online diagram editor used to design and visualize the attack flow.
+
+
+
+## 📐 What is an Attack Diagram?
+
+An attack diagram is a **visual representation** of how an attacker might:
+- Gain initial access  
+- Escalate privileges  
+- Move laterally through a network  
+- Access sensitive data  
+- Exfiltrate information  
+
+It helps **SOC teams, Red Teamers, and Threat Hunters** to simulate, analyze, and defend against threats effectively.
+
+
+
+## 📂 Files
+
+- 🔗 [**View my draw.io attack diagram**](link-of-my-attack-diagram)  
+- 📄 [**Download PDF version**](link-of-my-attack-diagram)
+
+
+
+
