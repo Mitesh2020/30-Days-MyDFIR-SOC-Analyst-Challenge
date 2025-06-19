@@ -156,3 +156,9 @@
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-20-notes)
 
 <br><br>
+
+<h4 align="">DAY 21 | MYTHIC AGENT SETUP TUTORIAL</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-21-notes)
+2. [Mythic C2 Profiles](https://github.com/MythicC2Profiles)
+3. [Mythic C2 Agents](https://github.com/mythicagents)
