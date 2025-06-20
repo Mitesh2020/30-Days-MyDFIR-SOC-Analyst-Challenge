@@ -162,3 +162,9 @@
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-21-notes)
 2. [Mythic C2 Profiles](https://github.com/MythicC2Profiles)
 3. [Mythic C2 Agents](https://github.com/mythicagents)
+
+<br><br>
+
+<h4 align="">DAY 22 | HOW TO CREATE ALERTS AND DASHBOARD IN KIBANA PART 4</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-22-notes)
