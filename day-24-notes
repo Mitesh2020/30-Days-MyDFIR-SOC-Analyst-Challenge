@@ -1,0 +1,103 @@
+# 🎫 osTicket Setup Tutorial | Day 24
+
+## 🎯 Objective:
+Learn how to set up and configure the **osTicket** ticketing system on a Windows Server VM using XAMPP.
+
+
+
+## 🖥️ Setup Environment
+- Host Machine: Windows Server VM
+- Required Tools:
+  - [XAMPP](https://www.apachefriends.org/index.html)
+  - [osTicket (Open Source)](https://osticket.com/download/)
+
+
+
+## 🛠️ Steps to Setup osTicket
+
+### ✅ Step-by-Step Instructions:
+
+1. **Set up Windows Server VM** for hosting osTicket.
+2. **Download and install XAMPP** on the Windows Server VM.
+3. Edit Apache domain configuration:
+   - Navigate to: `C:/xampp/properties`
+   - Set `apache_domainname=your-windows-server-ip`
+4. **Start Apache & MySQL** services via XAMPP control panel.
+5. Open **phpMyAdmin** from XAMPP → Apache → Admin button.
+6. Set MySQL **root user password**:
+   - Go to `User Accounts → root → Login Information`
+   - Change `hostname` to your server IP
+   - Set a password, click **Go**
+7. Update phpMyAdmin configuration:
+   - File: `C:/xampp/phpMyAdmin/config.inc.php`
+   - Replace `127.0.0.1` with your server IP and add the root password.
+8. Repeat **Step 5 & 6** for the user `pma`.
+
+
+
+## 📥 osTicket Installation
+
+9. Go to [osTicket → Self Hosted](https://osticket.com/download/) → Download the latest version.
+10. Extract the downloaded files.
+11. Create folder: `C:/xampp/htdocs/osTicket`
+12. Copy extracted folders `scripts` & `upload` into the `osTicket` folder.
+13. In browser, go to:  
+    `http://<your-windows-server-ip>/osTicket/upload`  
+    This opens the setup page.
+14. Rename file:  
+    `C:/xampp/htdocs/osTicket/upload/include/ost-sampleconfig.php`  
+    to  
+    `ost-config.php`
+
+
+
+## 🗃️ Database Setup
+
+15. Create database: `30-days-db`
+16. Assign database to root user:
+    - Click `User Accounts → root → Database`
+    - Add `30-days-db`, check all permissions, then click **Go**
+
+
+
+## ⚙️ Complete osTicket Setup
+
+17. On osTicket setup page, fill in:
+   - Helpdesk Name: *(any name)*
+   - Default Email: `test@test.com`
+   - Admin Email: `test1@test.com`
+   - Username, First & Last Name
+   - Password & Confirm
+   - MySQL Hostname: `your-windows-server-ip`
+   - Database: `30-days-db`
+   - Username: `root`
+   - Password: *(set earlier)*
+
+18. Click **Install Now** to finish setup.
+
+
+
+## 🔐 Post-Installation
+
+19. Open **PowerShell as Administrator**, navigate to:
+    ```
+    cd C:/xampp/htdocs/osTicket/upload/include/
+    icacls .\ost-config.php /reset
+    ```
+
+20. Open Windows Firewall → Add new **Inbound Rule** to allow:
+    - Port **80** (HTTP)
+    - Port **443** (HTTPS)
+
+21. Now you can access osTicket from another machine via:  
+    `http://<your-windows-server-ip>/osTicket/upload/`
+
+22. Admin Panel Login:  
+    `http://<your-windows-server-ip>/osTicket/upload/scp`
+
+
+
+## ✅ Final Result:
+You now have a fully functional **osTicket ticketing system** running on your own Windows Server VM, accessible over the local network.
+
+
