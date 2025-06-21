@@ -1,0 +1,53 @@
+# 📮 What is a Ticketing System? | Day 23
+
+## 🎯 Objective:
+Understand what a ticketing system is and get introduced to **osTicket**, a widely-used open-source support ticket system.
+
+
+
+## 🧾 What is a Ticketing System?
+
+A **ticketing system** is a tool used to track, manage, and resolve customer or internal service requests. It helps teams streamline their workflow by organizing issues into "tickets" that can be assigned, tracked, and updated throughout the lifecycle of the request.
+
+Ticketing systems are commonly used by:
+- IT support/help desks
+- Customer service teams
+- Incident response and SOC teams
+- Project and task management teams
+
+
+
+## 🛠️ Introduction to osTicket
+
+**osTicket** is an open-source support ticket system that enables teams to manage, organize, and archive support requests. It provides a user-friendly interface and powerful features similar to commercial solutions like Jira.
+
+### 🔑 Key Features:
+- Email-based ticket creation
+- Web-based ticket portal for users and agents
+- SLA policies
+- Auto-assignment and escalation
+- Custom forms and fields
+- Ticket filters and rules
+
+### 💡 Use Cases:
+- Incident response tracking  
+- IT support ticketing  
+- SOC alert triage and response documentation  
+- General customer support
+
+
+
+## 🌐 Project Link:
+- [osTicket Official Site](https://osticket.com/)
+- [osTicket GitHub Repo](https://github.com/osTicket/osTicket)
+
+
+
+## 🧪 What’s Next?
+Explore how osTicket can be used to simulate a basic SOC workflow by integrating alert sources and tracking resolution steps per ticket.
+
+
+
+**Note:** osTicket is open-source, but commercial support and hosted versions are available via its parent company.
+
+
