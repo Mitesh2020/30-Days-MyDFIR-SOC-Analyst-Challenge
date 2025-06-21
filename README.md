@@ -168,3 +168,9 @@
 <h4 align="">DAY 22 | HOW TO CREATE ALERTS AND DASHBOARD IN KIBANA PART 4</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-22-notes)
+
+<br><br>
+
+<h4 align="">DAY 23 | WHAT IS A TICKETING SYSTEM?</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-23-notes)
