@@ -1,0 +1,71 @@
+# osTicket + ELK Integration | Day 25
+
+## 🌟 Objective
+
+Integrate osTicket with ELK (Elasticsearch, Logstash, Kibana) and send a test alert into osTicket.
+
+---
+
+## ✅ Steps
+
+### 1. Create API Key in osTicket
+
+* Visit: `http://<your-windows-server-ip>/osTicket/upload/scp/`
+* Navigate: **Admin Panel** ➔ **Manage** ➔ **API**
+* Click **Add New API Key**
+
+  * **IP Address:** `<elasticsearch-vm-ip>`
+  * **Permissions:** Check "Can create tickets"
+  * **Internal Notes:** Any description (e.g., "ELK Integration")
+* Click **Add Key** and **note down the API key**
+
+---
+
+### 2. Create Webhook Connector in Kibana
+
+* Visit: `http://<your-elasticsearch-vm-ip>:5601/`
+* Go to: **Management** ➔ **Stack Management** ➔ **Alerts & Insights** ➔ **Connectors**
+* Click **Create Connector**
+* If prompted, click **Manage License** ➔ Start Trial
+* Choose **Webhook** connector
+* Fill details:
+
+  * **Connector Name:** `osTicket`
+  * **Method:** POST
+  * **URL:** `http://192.168.221.142/osTicket/upload/api/tickets.xml`
+  * **Authentication:** None
+  * **Add HTTP Header:**
+
+    * **Key:** `X-API-KEY`
+    * **Value:** `paste-your-api-key-here`
+* Click **Save & Test**
+
+---
+
+### 3. Test Integration
+
+* Visit: [osTicket Ticket API Doc](https://github.com/osTicket/osTicket/blob/develop/setup/doc/api/tickets.md)
+* Copy a sample ticket payload from documentation
+* Paste into **Body** of the connector test in Kibana
+* Click **Run Test**
+* Expected Result: **"Test was successful"**
+
+---
+
+### 4. View Ticket in osTicket
+
+* Go to: **Admin Panel** ➔ **Agent Panel**
+* You should see the newly created test ticket from ELK
+
+---
+
+## 📄 Notes
+
+* Ensure firewall allows incoming traffic between your ELK stack and osTicket server.
+* This is a basic test. You can now automate alert ticket creation via ELK detections and webhook triggers.
+
+---
+
+## 🔗 References
+
+* [osTicket API Docs](https://github.com/osTicket/osTicket/blob/develop/setup/doc/api/tickets.md)
