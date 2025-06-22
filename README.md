@@ -180,3 +180,9 @@
 <h4 align="">DAY 24 | OSTICKET SETUP TUTORIAL</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-24-notes)
+
+<br><br>
+
+<h4 align="">DAY 25 | OSTICKET + ELK INTEGRATION</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-25-notes)
