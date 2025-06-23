@@ -1,0 +1,104 @@
+# Investigate SSH Brute Force Attack | Day 26
+
+## Objective:
+
+Learn how to investigate an SSH brute force alert using Kibana and raise a support ticket via osTicket.
+
+---
+
+## Steps:
+
+### 1. Navigate to Alerts
+
+* Open Kibana at: `http://your-elasticsearch-vm-ip:5601`
+* Go to **Security** -> **Alerts** to view SSH brute force alerts.
+
+---
+
+### 2. Brute Force Investigation Methodology
+
+#### a. Is the IP known to perform brute force activity?
+
+* Check IP reputation using:
+
+  * [AbuseIPDB](https://www.abuseipdb.com/)
+  * [GreyNoise](https://www.greynoise.io/)
+
+#### b. Are other users affected by this IP?
+
+* Go to **Discover** tab in Kibana.
+* Use filters:
+
+  * `attacker.ip: <IP>`
+  * `user.name: *`
+
+#### c. Were any of them successful?
+
+* Search for successful login attempts:
+
+  ```
+  attacker.ip: <IP> AND message: "Accepted"
+  ```
+
+#### d. What activity occurred after successful login?
+
+* Investigate user activity logs after the time of successful login.
+
+---
+
+### 3. Configure osTicket Webhook in Rule Settings
+
+* Go to **Security** -> **Rules**
+* Select the **SSH Brute Force Rule**
+* Click **Edit rule settings** -> Go to **Actions** -> Choose **Webhook**
+
+#### Action Frequency:
+
+* `For each alert`
+
+#### Request Body:
+
+Paste the payload (used earlier in osTicket integration), modify as follows:
+
+* Remove `ip` and `attachments` tags
+
+* Under `name` tag: set any custom name
+
+* Under `subject`: use `{{rule.name}}`
+
+* Under `message`:
+
+  ```
+  Please investigate the rule: {{rule.name}}
+  ```
+
+* Save the changes
+
+---
+
+### 4. Simulate SSH Brute Force Attack
+
+* Perform brute-force login attempts on the Linux VM
+* If the rule is triggered, a ticket will automatically be raised in osTicket
+
+---
+
+## Outcome:
+
+* You can now effectively:
+
+  * Investigate SSH brute force alerts
+  * Correlate attacker activity
+  * Automate ticket creation in osTicket for security incidents
+
+---
+
+### Tools Used:
+
+* **Kibana (Elastic Security)**
+* **osTicket**
+* **AbuseIPDB / GreyNoise** for IP intelligence
+
+---
+
+> ✅ This process enables faster triage and response to brute force attacks in a monitored SOC environment.
