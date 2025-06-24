@@ -1,0 +1,102 @@
+# Investigate RDP Brute Force Attack | Day 27
+
+**Objective:**
+Learn how to investigate an RDP brute force alert.
+
+---
+
+## 🧠 Overview
+
+This tutorial walks you through investigating an RDP brute-force attack using the ELK stack (Elasticsearch, Logstash, Kibana) and osTicket for alert management.
+
+---
+
+## 🔍 Steps to Investigate RDP Brute Force Alert
+
+### 1. **Access Kibana Alerts**
+
+* Navigate to:
+  `http://<your-elasticsearch-vm-ip>:5601`
+* Go to **Security** > **Alerts**
+
+### 2. **Investigation Methodology**
+
+Use the following approach to analyze the brute force behavior:
+
+#### ✅ Is the IP known to perform brute-force activity?
+
+* Check the attacker IP on reputation sites:
+
+  * [https://abuseipdb.com](https://abuseipdb.com)
+  * [https://greynoise.io](https://greynoise.io)
+
+#### ✅ Are other users affected by this IP?
+
+* Go to **Discover** in Kibana
+* Use a filter:
+
+  ```
+  ```
+
+attacker-ip AND user.name:\*
+
+```
+
+#### ✅ Were any logins successful from this IP?
+- Use this search query:
+```
+
+attacker-ip AND event.code:4624
+
+````
+- This will show successful RDP login attempts
+
+#### ✅ What activity occurred after login?
+- Check commands executed, tools installed, or files accessed.
+- Review subsequent logs for suspicious behavior or privilege escalation.
+
+---
+
+## 📬 Automate Ticket Creation with osTicket
+
+### Configure Webhook Action in ELK:
+
+1. Go to: `Rules`
+2. Choose **RDP Brute Force Rule**
+3. Click **Edit Rule Settings** → **Actions** → **Webhook**
+4. Configure as follows:
+ - **Action Frequency:** For each alert
+ - **Body Payload:**
+```json
+{
+"name": "RDP Brute Force Alert",
+"subject": "{{rule.name}}",
+"message": "Please investigate the rule: {{rule.name}}"
+}
+````
+
+> **Note:** Make sure your osTicket integration is already tested and working (see Day 25)
+
+---
+
+## 🧪 Test It
+
+* Launch an RDP brute force attack in a controlled lab setup
+* Monitor logs and alert creation
+* Check ticket generation in osTicket
+
+---
+
+## 🛡️ Reminder
+
+> This lab was executed in a safe and isolated environment for learning and awareness only.
+
+---
+
+## 📌 Tags
+
+`#CyberSecurity #BruteForce #RDP #Kibana #ElasticSIEM #SOC #osTicket #ThreatInvestigation #BlueTeam`
+
+---
+
+For previous SSH investigation steps, refer to: **Day 26 - Investigate SSH Brute Force Attack**
