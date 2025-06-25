@@ -1,0 +1,77 @@
+# Investigate Mythic Agent | Day 28
+
+## Objective:
+
+Learn how to investigate Mythic C2 telemetry that we generated during the simulation.
+
+## Overview:
+
+This tutorial focuses on analyzing and investigating telemetry data collected from a Mythic Command and Control (C2) session using the Apollo agent. We aim to identify artifacts, commands, and traces left behind during the attacker simulation.
+
+---
+
+## 🛠️ Prerequisites:
+
+* Working setup of Mythic C2 Framework with Apollo agent.
+* Windows Server VM used as the victim machine.
+* Elasticsearch & Kibana setup to collect Windows logs via Winlogbeat or similar.
+* Previously executed payload on victim and C2 session established.
+
+---
+
+## 🔍 Investigation Steps:
+
+### 1. **Review the Commands Executed in Mythic**
+
+* Login to Mythic dashboard.
+* Go to the "Callbacks" section.
+* Select the callback corresponding to the compromised host.
+* Review all the commands executed (e.g., `whoami`, `ipconfig`, `net user`, download, etc.).
+
+### 2. **Check Telemetry in Kibana**
+
+* Open Kibana: `http://<elasticsearch-vm-ip>:5601`
+* Go to **Discover** tab and run queries based on command execution.
+
+  Example query:
+
+  ```
+  event.code : 1 AND winlog.event_data.OriginalFileName : Apollo.exe
+  ```
+* Look for PowerShell, rundll32, cmd-based telemetry tied to the timeframe when Mythic agent was active.
+
+### 3. **Pivot to Other Related Events**
+
+* Look for related process creation (`event.code:1`), network connection (`event.code:3`), and defender alerts (`event.code:5001`).
+* Track how the payload was downloaded (e.g., PowerShell download cradle).
+* Investigate if any additional binaries were dropped or if privilege escalation was attempted.
+
+### 4. **Use Kibana Dashboard**
+
+* If a custom dashboard is already created (as done in Day 22), use it to quickly visualize:
+
+  * Parent-child process chains.
+  * Network activity.
+  * Defender alerts blocked/executed.
+
+### 5. **Cross-reference with Threat Intelligence**
+
+* Use VirusTotal or Hybrid Analysis to scan the Apollo agent binary (if saved).
+* Note any suspicious indicators that align with known threat actors or tools.
+
+---
+
+## 🎥 Video Walkthrough:
+
+Watch the full walkthrough tutorial here: [YouTube Video](https://youtu.be/b11TuDx_CjU?si=8ybVs24XTp83XieE)
+
+---
+
+## ✅ Outcome:
+
+By the end of this investigation, you should:
+
+* Understand how attacker actions leave forensic traces in system logs.
+* Know how to identify agent behavior using log correlation.
+* Be able to use Mythic + Kibana for both offensive simulation and defensive detection.
+
