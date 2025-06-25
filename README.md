@@ -198,3 +198,9 @@
 <h4 align="">DAY 27 | INVESTIGATE RDP BRUTE FORCE ATTACK</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-27-notes)
+
+<br><br>
+
+<h4 align="">DAY 28 | INVESTIGATE MYTHIC AGENT</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-28-notes)
