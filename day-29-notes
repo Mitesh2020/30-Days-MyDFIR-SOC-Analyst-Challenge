@@ -1,0 +1,46 @@
+# Elastic Defend Setup Tutorial | Day 29
+
+## Objective
+
+Install and configure Elastic EDR (Elastic Defend) to detect and respond to malicious activity on a Windows endpoint.
+
+---
+
+## Steps
+
+### 1. Access Kibana
+
+Navigate to the Kibana dashboard by visiting:
+
+```
+http://your-elasticsearch-vm-ip:5601
+```
+
+### 2. Add Elastic Defend Integration
+
+* Go to **Management** > **Integrations**
+* Search for and select **Elastic Defend**
+* Click **Add Elastic Defend**
+* Fill in the required details:
+
+  * **Integration Name**: `any-name`
+  * **Description**: `elastic edr`
+
+### 3. Configure Integration with Existing Host
+
+* Select **Existing Host**
+* Choose the **Windows policy** created earlier
+* Click **Save and Continue**
+* Click **Save and Deploy Changes**
+
+### 4. Test Detection
+
+* On the **Windows Server VM**, execute a malicious `.exe` file previously used for Mythic C2 communication
+* Observe that **Elastic EDR** immediately detects and removes the file upon execution
+
+---
+
+## Outcome
+
+You have successfully installed and configured Elastic Defend EDR on a Windows machine. Any suspicious or malicious activity like C2 communications will now be automatically detected and handled by Elastic.
+
