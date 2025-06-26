@@ -204,3 +204,9 @@
 <h4 align="">DAY 28 | INVESTIGATE MYTHIC AGENT</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-28-notes)
+
+<br><br>
+
+<h4 align="">DAY 29 | ELASTIC DEFEND SETUP TUTORIAL</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-29-notes)
