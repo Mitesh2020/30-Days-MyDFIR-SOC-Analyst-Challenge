@@ -1,0 +1,68 @@
+# Troubleshooting 30-Day MyDFIR SOC Analyst Challenge | Day 30
+
+## Objective:
+
+Troubleshoot common issues encountered during the 30-day MyDFIR SOC Analyst Challenge, particularly related to Kibana, Elastic Agent, osTicket, and webhook integration.
+
+## Common Issues & Resolutions:
+
+### 1. Kibana Connection Error
+
+**Symptoms:** Kibana dashboard is not loading or inaccessible.
+**Possible Fixes:**
+
+* Ensure Elasticsearch and Kibana services are running.
+* Verify network connectivity between browser and Elasticsearch VM.
+* Check if the correct port (5601) is open and accessible.
+
+### 2. Fleet Server Failed - Timed Out
+
+**Symptoms:** Fleet server setup fails during Elastic Agent enrollment.
+**Possible Fixes:**
+
+* Confirm Elasticsearch and Kibana are fully initialized.
+* Ensure Fleet server host IP is correctly set in Fleet settings.
+* Open required ports (8220 for Fleet, 5601 for Kibana).
+
+### 3. Fail to Execute Request to Fleet Server
+
+**Symptoms:** Elastic Agent fails to communicate with Fleet server.
+**Possible Fixes:**
+
+* Recheck Fleet server URL in agent installation script.
+* Ensure firewall rules allow communication.
+* Restart the agent and Fleet server.
+
+### 4. x509 Certificate Signed by Unknown Authority
+
+**Symptoms:** TLS/SSL certificate issues during secure communication setup.
+**Possible Fixes:**
+
+* Use `--insecure` flag when installing Elastic Agent in lab environment.
+* Ensure correct CA certificate is in use.
+* For production, use valid and signed certificates.
+
+### 5. Cannot Connect - Invalid Settings (osTicket)
+
+**Symptoms:** Kibana unable to send alerts to osTicket via webhook.
+**Possible Fixes:**
+
+* Recheck osTicket API URL: `http://<windows-server-ip>/osTicket/upload/api/tickets.xml`
+* Verify the API key and IP address match in osTicket settings.
+* Ensure port 80 is open and reachable.
+
+### 6. Error Calling Webhook Request Failed
+
+**Symptoms:** Webhook connector in Kibana fails to trigger alerts.
+**Possible Fixes:**
+
+* Test the webhook with sample payload (from osTicket GitHub API docs).
+* Validate that the content type and headers (especially `X-API-KEY`) are correct.
+* Ensure osTicket server is reachable from Kibana/Elastic instance.
+
+## 📺 Watch & Learn:
+
+For detailed step-by-step troubleshooting, refer to the video guide:
+**[Watch Here](https://youtu.be/o-eR-tJlbqE?si=pCJdGt6eKaQdLH3C)**
+
+
