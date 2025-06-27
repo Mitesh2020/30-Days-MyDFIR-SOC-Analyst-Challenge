@@ -210,3 +210,9 @@
 <h4 align="">DAY 29 | ELASTIC DEFEND SETUP TUTORIAL</h4>
 
 1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-29-notes)
+
+<br><br>
+
+<h4 align="">DAY 30 | TROUBLESHOOTING</h4>
+
+1. [Notes](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/day-29-notes)
