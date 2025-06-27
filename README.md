@@ -1,5 +1,24 @@
 <h1 align="center">30 DAYS MYDFIR SOC ANALYST CHALLENGE</h1>
+
+<h1 align="center">
+  
+[![Made With](https://img.shields.io/badge/Made%20With-92f5d8)](http://www.firsttimersonly.com/)
+[![Elasticsearch](https://img.shields.io/badge/Elasticsearch-63dbdc)](http://www.firsttimersonly.com/)
+[![Logstash](https://img.shields.io/badge/Logstash-4b78e0)](http://www.firsttimersonly.com/)
+[![Kibana](https://img.shields.io/badge/Kibana-5310b8)](http://www.firsttimersonly.com/)
+[![Sysmon](https://img.shields.io/badge/Sysmon-150649)](http://www.firsttimersonly.com/)
+[![Mythic](https://img.shields.io/badge/Mythic-5310b8)](http://www.firsttimersonly.com/)
+[![osTicket](https://img.shields.io/badge/osTicket-4b78e0)](http://www.firsttimersonly.com/)
+[![Windows Server](https://img.shields.io/badge/Windows%20Server-63dbdc)](http://www.firsttimersonly.com/)
+[![Ubuntu Server](https://img.shields.io/badge/Ubuntu%20Server-92f5d8)](http://www.firsttimersonly.com/)
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.png)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/open-source.png)](http://forthebadge.com)
+
+</h1>
+
 <br><br>
+
 <h2 align="center">SUMMARY</h2>
 
 <h3>1st Week:</h3>
@@ -26,7 +45,8 @@
 2. How to set up and integrate a ticketing system
 3. Go over how to investigate alerts (high-level)
    
-<br><br>
+<br><br> <hr>
+
 <h4 align="">DAY 1 | HOW TO CREATE A LOGICAL DIAGRAM</h4>
 
 1. [Draw.io file](https://github.com/Mitesh2020/30-Days-MyDFIR-SOC-Analyst-Challenge/blob/main/30-days-mydfir-diagram.drawio)
